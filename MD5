@@ -1,0 +1,17 @@
+db2a6961750b22bcbae27b6a329da1ef *DESCRIPTION
+144896b4cec2cc3457987bfed2710187 *LICENSE
+f0bf401b363f086aa7f3dfb27bfac3f0 *NAMESPACE
+72696a62e77a5180f4cd982eb9b80674 *R/latex2exp.R
+4d3ff4a9acb8929ba3fb47aaad6223dc *build/vignette.rds
+c291608b6e1545c38f6859a4e1368270 *inst/doc/latex2exp.R
+98e90685b4420f0aa080c3de57edbba7 *inst/doc/latex2exp.Rmd
+9bcfb1cd7040cf1edc8ff0c0973ddedf *inst/doc/latex2exp.html
+6f046766ff96a7967e5ecd7fd8a29b50 *man/latex2exp.Rd
+d3fa2a209cb0e54300dfd2a4459806ad *man/latex2exp_examples.Rd
+8aa4adb3cbb876dc417b8abe0a032002 *man/latex2exp_supported.Rd
+b131f4d9dd323502fcbe6e8264667bde *man/plot.expression.Rd
+0cdf586cc95bbcf74bfd25b86a375ca6 *man/toString.latextoken.Rd
+6bc7d6a293e094382d831e419bbe3407 *tests/testthat.R
+dfb2d57afbd129845839c84247e1cf88 *tests/testthat/Rplots.pdf
+a2623e417038827cff878c718162d6fd *tests/testthat/test_latex2exp.r
+98e90685b4420f0aa080c3de57edbba7 *vignettes/latex2exp.Rmd
