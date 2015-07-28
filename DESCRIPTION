@@ -1,8 +1,8 @@
 Package: latex2exp
 Type: Package
 Title: Use LaTeX Expressions in Plots
-Version: 0.3.1
-Date: 2015-07-02
+Version: 0.3.2
+Date: 2015-07-28
 Authors@R: person("Stefano", "Meschiari", email="stefano.meschiari@gmail.com", role=c("aut", "cre"))
 Description: Parses and converts LaTeX math formulas to R's plotmath expressions, used to enter mathematical formulas and symbols to be rendered as text, axis labels, etc. throughout R's plotting system.
 License: MIT + file LICENSE
@@ -13,8 +13,8 @@ LazyData: TRUE
 Suggests: testthat, knitr, ggplot2, plyr
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2015-07-04 19:30:33 UTC; sm52286
+Packaged: 2015-07-28 18:21:10 UTC; sm52286
 Author: Stefano Meschiari [aut, cre]
 Maintainer: Stefano Meschiari <stefano.meschiari@gmail.com>
 Repository: CRAN
-Date/Publication: 2015-07-05 10:34:51
+Date/Publication: 2015-07-29 00:07:51
