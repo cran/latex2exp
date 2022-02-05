@@ -34,6 +34,8 @@ test_that("Operators are rendered correctly, regardless of spacing", {
                       a * {phantom() == phantom()} * b * {phantom() == phantom()} * c)
   expect_renders_same("$a > b < c$",
                       a * {phantom() > phantom()} * b * {phantom() < phantom()} * c)
+  expect_renders_same("$a \\ne b \\leq c \\geq d$",
+                      {a != b} <= {c >= d})
   
 })
 test_that("Special characters in math or text mode do not cause errors", {
@@ -45,6 +47,13 @@ test_that("Special characters in math or text mode do not cause errors", {
                       a * second)
   expect_renders_same("R's plotmath system",
                       'R\'s plotmath system')
+  
+  # commas should render differently depending on whether they 
+  # are inside math mode or not.
+  expect_renders_same("a, b, c",
+                      "a, b, c")
+  expect_renders_same("$a,b,c$",
+                      list(a, b, c))
 })
 
 test_that("Grouping over deeply nested commands renders correctly", {
@@ -157,4 +166,34 @@ test_that("User-defined latex renders correctly", {
 test_that("Certain invalid LaTeX fails", {
   expect_error({ TeX("$\\bar{A$") })
   expect_error({ TeX("$\\left{\\left{A\\right}$") })
+})
+
+test_that("Type and length of return value is as expected", {
+  expect_length(TeX("$a$"), 1)
+  expect_length(TeX(c("$a$", "$b$")), 2)
+  expect_length(TeX(""), 1)
+  
+  expect_s3_class(TeX("$a$"), "expression")
+  expect_s3_class(TeX("$a$"), "latexexpression")
+  
+  expect_s3_class(TeX(""), "expression")
+  expect_s3_class(TeX(""), "latexexpression")
+  
+  expect_type(TeX("$a$", output="character"), "character")
+})
+
+test_that("Consecutive operators can be parsed", {
+  expect_renders_same("$a \\pm \\pm b$",
+                      a %+-% phantom() %+-% b)
+  expect_renders_same("$a\\,\\,\\;\\; b$",
+                      a*phantom(.) * phantom(.) * phantom() ~~ phantom() ~~ b)
+})
+
+test_that("Certain edge cases will attempt to render correctly", {
+  expect_renders_same("$\\bar{x} \\, (\\neq x)$",
+                      bar(x) * phantom(.) * (phantom() != x))
+  expect_renders_same("$)a($",
+                      group(')', a, '('))
+  expect_renders_same(")$a($",
+                      ')' * group('.', a, '('))
 })
