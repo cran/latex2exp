@@ -12,7 +12,7 @@
 
 <meta name="author" content="Stefano Meschiari" />
 
-<meta name="date" content="2022-02-05" />
+<meta name="date" content="2022-03-02" />
 
 <title>Using latex2exp</title>
 
@@ -141,7 +141,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <h1 class="title toc-ignore">Using latex2exp</h1>
 <h4 class="author">Stefano Meschiari</h4>
-<h4 class="date">2022-02-05</h4>
+<h4 class="date">2022-03-02</h4>
 
 
 
@@ -151,7 +151,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Here’s a simple example:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use raw strings, no need to escape backslashes.</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">TeX</span>(r<span class="st">&quot;(</span><span class="sc">\t</span><span class="st">extbf{Euler&#39;s identity} is $e^{i\pi} + 1 = 0$.)&quot;</span>)</span></code></pre></div>
-<p>Since R 4.0, it is recommended to use the new raw string literal syntax (see <code>?Quotes</code>). The syntax looks like <code>r&quot;(...)&quot;</code>, where <code>...</code> can contain any character sequence, including <code>\</code>.</p>
+<p>In this example, <code>\textbf{}</code> is used to mark a fragment of text as bold, <code>$</code> introduces inline math mode, <code>^{}</code> typesets its contents as superscript, and <code>\pi</code> typesets the letter <span class="math inline">\(\pi\)</span>.</p>
+<p>Starting with R 4.0, it is recommended to use the new raw string literal syntax (see <code>?Quotes</code>). The syntax looks like <code>r&quot;(...)&quot;</code>, where <code>...</code> can contain any character sequence, including <code>\</code>.</p>
 <p>Another option is to escape the backslash character (<code>\</code>) for LaTeX commands, such that the command will be written as <code>\\command</code> rather than <code>\command</code>. This will also work on versions of R older than 4.0:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Equivalent to the previous code fragment.</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Use regular strings, but escape the backslashes.</span></span>
