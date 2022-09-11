@@ -1,8 +1,8 @@
 Package: latex2exp
 Type: Package
 Title: Use LaTeX Expressions in Plots
-Version: 0.9.4
-Date: 2022-03-01
+Version: 0.9.5
+Date: 2022-09-10
 Authors@R: person("Stefano", "Meschiari", email="stefano.meschiari@gmail.com", role=c("aut", "cre"))
 Description: Parses and converts LaTeX math formulas to R's plotmath
     expressions, used to enter mathematical formulas and symbols to be rendered as
@@ -13,14 +13,14 @@ URL: https://www.stefanom.io/latex2exp/,
 BugReports: https://github.com/stefano-meschiari/latex2exp/issues
 Imports: stringr, magrittr
 Encoding: UTF-8
-Suggests: testthat, knitr, ggplot2, rmarkdown, purrr, tibble,
+Suggests: testthat, waldo, knitr, ggplot2, rmarkdown, purrr, tibble,
         reactable, htmltools, RCurl, rlang, dplyr
 VignetteBuilder: knitr
 RoxygenNote: 7.1.2
 Language: en-US
 NeedsCompilation: no
-Packaged: 2022-03-02 22:54:35 UTC; stefano
+Packaged: 2022-09-11 18:39:59 UTC; stefano
 Author: Stefano Meschiari [aut, cre]
 Maintainer: Stefano Meschiari <stefano.meschiari@gmail.com>
 Repository: CRAN
-Date/Publication: 2022-03-02 23:30:02 UTC
+Date/Publication: 2022-09-11 23:02:54 UTC
