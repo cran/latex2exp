@@ -1,8 +1,8 @@
 Package: latex2exp
 Type: Package
 Title: Use LaTeX Expressions in Plots
-Version: 0.9.5
-Date: 2022-09-10
+Version: 0.9.6
+Date: 2022-11-27
 Authors@R: person("Stefano", "Meschiari", email="stefano.meschiari@gmail.com", role=c("aut", "cre"))
 Description: Parses and converts LaTeX math formulas to R's plotmath
     expressions, used to enter mathematical formulas and symbols to be rendered as
@@ -19,8 +19,8 @@ VignetteBuilder: knitr
 RoxygenNote: 7.1.2
 Language: en-US
 NeedsCompilation: no
-Packaged: 2022-09-11 18:39:59 UTC; stefano
+Packaged: 2022-11-28 01:32:27 UTC; stefano
 Author: Stefano Meschiari [aut, cre]
 Maintainer: Stefano Meschiari <stefano.meschiari@gmail.com>
 Repository: CRAN
-Date/Publication: 2022-09-11 23:02:54 UTC
+Date/Publication: 2022-11-28 03:30:02 UTC
